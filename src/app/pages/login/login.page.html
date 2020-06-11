@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Skin Cancer Detection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+<!--
+<h3>Login </h3>
+   <form [formGroup]="loginForm" #userform="ngForm">
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" placeholder="Enter your email id"  formControlName="emailId"></ion-input>
+  </ion-item>   
+  <ion-item class="error-message" *ngIf="emailval()" >
+    <ion-label>Please enter a valid email address.</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" placeholder="Enter your password (min 8 letters)" formControlName="password"></ion-input>
+  </ion-item>   
+  <ion-item class="error-message" *ngIf="emailpas()" >
+    <ion-label>Please enter a valid and strong password.</ion-label>
+  </ion-item>
+  <ion-button color="primary"type="submit" expand="block" [disabled]="userform.invalid" (click)="loginMethod(userform)">Sign In</ion-button>
+  </form>
+
+  <ion-button expand="block" fill="clear" color="primary" routerLink="/signup">
+    Create a new account
+  </ion-button>
+
+  <ion-button expand="block" fill="clear" color="primary" routerLink="/reset-password">
+    Forgot Password?
+  </ion-button>
+
+</ion-content>
+-->
+<div class="scroll">
+<div class="panda">
+  <div class="ear"></div>
+  <div class="face">
+    <div class="eye-shade"></div>
+    <div class="eye-white">
+      <div class="eye-ball"></div>
+    </div>
+    <div class="eye-shade rgt"></div>
+    <div class="eye-white rgt">
+      <div class="eye-ball"></div>
+    </div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+  </div>
+  <div class="body"> </div>
+  <div class="foot">
+    <div class="finger"></div>
+  </div>
+  <div class="foot rgt">
+    <div class="finger"></div>
+  </div>
+</div>
+<form [formGroup]="loginForm" #userform="ngForm">
+
+  <div class="hand"></div>
+  <div class="hand rgt"></div>
+  <h1>                 Login</h1>
+  
+  
+  <div class="form-group">
+    <input required="required" class="form-control"   formControlName="emailId"/>
+    <label class="form-label">Username</label>
+    <ion-item class="error-message" *ngIf="emailval()" >
+      <ion-label>Please enter a valid username.</ion-label>
+    </ion-item>
+  </div>
+  <div class="form-group">
+    <input id="password" type="password" required="required" class="form-control" formControlName="password"/>
+    <label class="form-label">Password</label>
+    <ion-item class="error-message" *ngIf="emailpas()" >
+      <ion-label>Please enter a valid and strong password.</ion-label>
+    </ion-item>
+   <p>                  </p> <button class="btn" [disabled]="userform.invalid"(click)="loginMethod(userform)">Login </button>
+   <button class="btn"  routerLink="/signup">SignUp </button>
+
+  </div>
+</form>
+</div>>

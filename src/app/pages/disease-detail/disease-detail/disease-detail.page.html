@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Skin Cancer Detection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h1><strong>{{currentdisease?.name}}</strong></h1>
+      <p><strong>Description:</strong> </p>
+      <p>{{currentdisease?.discription}}</p>
+     
+    </ion-card-content>
+  </ion-card>
+  <div>
+    <ion-button style="font-size: 14px;" (click)="test()">Test Again</ion-button>
+    
+    <ion-button style="font-size: 14px;" (click)="payWithRazor()">Upgrade to Premium</ion-button>
+  </div>
+</ion-content>
