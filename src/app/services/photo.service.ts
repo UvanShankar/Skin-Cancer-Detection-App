@@ -170,10 +170,15 @@ console.log('formdata111',fd.toString());
     var realData = block[1].split(",")[1]; // In this case "R0lGODlhPQBEAPeoAJosM...."
 
     // Convert it to a blob to upload
-    var blob = this.b64toBlob(realData, contentType);
-    const imageFile = new File([base64Data], fileName, { type: "image/jpg" });
-    var img = new Image(); // Create new img element
-    img.src = "data:image/jpeg;base64," + this.selectedimg;
+     if(this.platform.is("hybrid"))
+    {blob = this.b64toBlob(realData, contentType);}
+    else 
+    {
+            // Fetch the photo, read as a blob, then convert to base64 format
+            const response = await fetch(cameraPhoto.webPath);
+             blob = await response.blob();
+    
+    }
     fd.append("image", blob, fileName);
     //fd.append('image',this.selectedimg);
     //fd.append('image',img);
@@ -280,7 +285,7 @@ console.log('formdata111',fd.toString());
               const photoCopy = { ...p };
               delete photoCopy.base64;
 
-              // return photoCopy;
+               return photoCopy;
             })
           ),
     });
